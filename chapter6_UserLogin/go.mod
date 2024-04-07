@@ -1,15 +1,18 @@
-module chapter5
+module chapter6
 
 go 1.22
 
 require (
 	github.com/go-sql-driver/mysql v1.5.0
+	github.com/gorilla/context v1.1.2
+	github.com/gorilla/sessions v1.2.2
 	github.com/jinzhu/gorm v1.9.16
 	github.com/spf13/viper v1.18.2
 )
 
 require (
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
+	github.com/gorilla/securecookie v1.1.2 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect

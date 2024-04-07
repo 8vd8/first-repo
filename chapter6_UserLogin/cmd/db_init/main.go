@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chapter4/model"
+	"chapter6/model"
 	"log"
 )
 

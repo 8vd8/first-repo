@@ -1,7 +1,7 @@
 package model
 
 import (
-	"chapter5/config"
+	"chapter6/config"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"log"

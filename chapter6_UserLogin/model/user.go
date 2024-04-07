@@ -19,10 +19,23 @@ func (u *User) SetPassword(pwd string) {
 	u.PasswordHash = GeneratePasswordHash(pwd) //直接对传入的密码进行哈希值加密
 }
 
+func (u *User) CheckPassword(pwd string) bool {
+	return GeneratePasswordHash(pwd) == u.PasswordHash
+}
+
 func GetUserByUsername(username string) (*User, error) {
 	var user User
 	if err := db.Where("username=?", username).Find(&user).Error; err != nil {
 		return nil, err
 	}
 	return &user, nil
+	/*
+		现在我们在
+	*/
+}
+
+func AddUser(username, password, email string) error {
+	user := User{Username: username, Email: email}
+	user.SetPassword(password)
+	return db.Create(&user).Error
 }
