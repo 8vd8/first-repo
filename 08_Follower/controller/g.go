@@ -10,7 +10,7 @@ var (
 	templates      map[string]*template.Template
 	sessionName    string
 	store          *sessions.CookieStore
-	pageLimit      int
+	flashName      string
 )
 
 func init() {
@@ -18,7 +18,9 @@ func init() {
 	//基于cookie的会话存储对象，将其存储在全局变量中
 	//提供一个字节数组作为参数，用于加密和验证Cookie
 	store = sessions.NewCookieStore([]byte("something-very-secret"))
+
 	sessionName = "go-mega"
+	flashName = "go-flash"
 }
 
 // Startup func
