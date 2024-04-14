@@ -1,0 +1,13 @@
+mysql:
+  charset: utf8
+  db: go-mega
+  host: localhost
+  password: 123456
+  user: root
+  mail:
+    smtp:	smtp.qq.com
+    smtp-port: 465
+    user: 1936002261@qq.com
+    password: "lnswkzhbwxerddhd"
+  server:
+    url:http://127.0.0.1:8888
